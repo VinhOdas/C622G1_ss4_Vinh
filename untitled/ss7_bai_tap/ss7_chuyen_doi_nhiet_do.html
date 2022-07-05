@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    var f = prompt("Nhập độ F");
+    f = parseFloat(f);
+    var c = prompt("Nhập độ C");
+    c = parseFloat(c);
+    var cc = (5 * (f - 32)) / 9;
+    var ff = 32 + c * 9 / 5;
+    document.write("chuyển qua độ C là:  " + cc);
+    document.write("<br/>");
+    document.write("chuyen qua độ F là:  " + ff);
+</script>
+</body>
+</html>

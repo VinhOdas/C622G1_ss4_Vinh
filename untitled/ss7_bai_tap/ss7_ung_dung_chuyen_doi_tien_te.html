@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><label for="SoLuong">Amount</label></th>
+        <th>From Currency</th>
+        <th style="position: relative;left: 100px">To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" size="20" placeholder="1" id="SoLuong"></td>
+        <td><select name="tiente" style="position: relative;left:35px; margin: 10px" id="tu">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><select name="tiente1" style="position: relative;left:105px; margin: 10px " id="den">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select></td>
+        <td><button style="position: relative;left: 100px" onclick="DoiTien()">Chuyển Thành</button></td>
+    </tr>
+</table><br/>
+<p id="KetQua"></p>
+</body>
+<script src="ss7_ung_dung_chuyen_doi_tien_te.js"></script>
+</html>

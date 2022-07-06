@@ -12,19 +12,40 @@
         <th style="position: relative;left: 100px">To Currency</th>
     </tr>
     <tr>
-        <td><input type="text" size="20" placeholder="1" id="SoLuong"></td>
-        <td><select name="tiente" style="position: relative;left:35px; margin: 10px" id="tu">
+        <td><input type="text" size="20" id="SoLuong"></td>
+        <td><select  style="position: relative;left:35px; margin: 10px"  id="tu">
             <option value="VND">VND</option>
             <option value="USD">USD</option>
         </select></td>
-        <td><select name="tiente1" style="position: relative;left:105px; margin: 10px " id="den">
+        <td><select style="position: relative;left:105px; margin: 10px "  id="den">
             <option value="USD">USD</option>
             <option value="VND">VND</option>
         </select></td>
-        <td><button style="position: relative;left: 100px" onclick="DoiTien()">Chuyển Thành</button></td>
+        <td>
+            <button style="position: relative;left: 100px" onclick="DoiTien()">ChuyểnThành</button>
+        </td>
     </tr>
-</table><br/>
-<p id="KetQua"></p>
+</table>
+<br/>
+<p id="KetQua">123</p>
 </body>
-<script src="ss7_ung_dung_chuyen_doi_tien_te.js"></script>
+<script >
+    function DoiTien() {
+        let SoLuong = document.getElementById("SoLuong").value;
+        let tu1 = document.getElementById("tu").value;
+        let den = document.getElementById("den").value;
+        let KetQua;
+
+        if (tu1 == "USD" && den == "VND") {
+            KetQua = " KetQua" + (SoLuong * 23000) + "  :d";
+        } else if (tu1 == "VND" && den == "USD") {
+            KetQua = " KetQua" + (SoLuong / 23000) + "  :$";
+        } else if (tu1 == "VND") {
+            KetQua = " KetQua" + SoLuong + " d"
+        } else {
+            KetQua = " KetQua" + SoLuong + " $"
+        }
+        document.getElementById("KetQua").innerHTML = KetQua;
+    }
+</script>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="number" name="o1" id="number1">
+<input type="number" name="o2" id="number2">
+<button onclick="tinhToan('Cong')">Addition(+)</button>
+<button onclick="tinhToan('Tru')">Subtraction()</button>
+<button onclick="tinhToan('Nhan')">Multiplication(X)</button>
+<button onclick="tinhToan('Chia')">Division(/)</button>
+</body>
+<script>
+
+    // function phepCong() {
+    //     let A = document.getElementById("number1").value;
+    //     let B = document.getElementById("number2").value;
+    //     A = parseInt(A);
+    //     B = parseInt(B);
+    //     alert(A+B);
+    // }
+    //
+    // function phepTru() {
+    //     let A = document.getElementById("number1").value;
+    //     let B = document.getElementById("number2").value;
+    //     A = parseInt(A);
+    //     B = parseInt(B);
+    //     alert(A-B);
+    //
+    // }
+    //
+    // function phepNhan() {
+    //     let A = document.getElementById("number1").value;
+    //     let B = document.getElementById("number2").value;
+    //     A = parseInt(A);
+    //     B = parseInt(B);
+    //     alert(A*B);
+    //
+    // }
+    //
+    // function phepChia() {
+    //     let A = document.getElementById("number1").value;
+    //     let B = document.getElementById("number2").value;
+    //     A = parseInt(A);
+    //     B = parseInt(B);
+    //     alert(A/B);
+
+    // }
+    function tinhToan(value) {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        a = parseInt(a);
+        b = parseInt(b);
+
+        if (value=='Cong') {
+            alert(a + b);
+        }
+         if (value=='Tru') {
+            alert(a - b);
+        }
+         if (value=='Nhan'){
+            alert(a*b)
+        }
+        if (value=='Chia') {
+            alert(a/b);
+        }
+    }
+</script>
+</html>

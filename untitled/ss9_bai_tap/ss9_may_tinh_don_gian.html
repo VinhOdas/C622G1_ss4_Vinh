@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<table style="width: 200px;height: 200px" align="center" border="1">
+    <tr>
+        <th colspan="4"><input type="text" id="bamSo" size="35"></th>
+    </tr>
+    <tr>
+        <td  align="center"><input type="button" value="1" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="2" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="3" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="+" onclick="bamSo(this.value)"></td>
+    </tr>
+    <tr>
+        <td  align="center"><input type="button" value="4" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="5" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="6" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="-" onclick="bamSo(this.value)"></td>
+    </tr>
+    <tr>
+        <td  align="center"><input type="button" value="7" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="8" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="9" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="*" onclick="bamSo(this.value)"></td>
+    </tr>
+    <tr>
+        <td  align="center"><input type="button" value="C" onclick=xoa()></td>
+        <td  align="center"><input type="button" value="=" onclick=bang()></td>
+        <td  align="center"><input type="button" value="0" onclick="bamSo(this.value)"></td>
+        <td  align="center"><input type="button" value="/" onclick="bamSo(this.value)"></td>
+    </tr>
+
+</table>
+</body>
+<script>
+  function bamSo(duLieu) {
+      let str = document.getElementById("bamSo").value;
+      document.getElementById("bamSo").value = str+ duLieu;
+  }
+  function bang() {
+      let str = document.getElementById("bamSo").value;
+      let ketQua = eval(str);
+      document.getElementById("bamSo").value = ketQua;
+  }
+  function xoa() {
+      document.getElementById("bamSo").value="";
+
+  }
+</script>
+</html>

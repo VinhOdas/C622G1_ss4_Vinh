@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1.</title>
+</head>
+<body>
+
+</body>
+<script>
+    let income = parseInt(prompt("Nhập vào số thu nhập của bạn:"));
+    if (income > 80) {
+        alert("thuế thu nhập cá nhân của bạn là 35%:  " + income * 0.35);
+    } else if (income <= 80 && income > 52) {
+        alert("thuế thu nhập cá nhân của bạn là 30%:  " + income * 0.30);
+    } else if (income <= 52 && income > 32) {
+        alert("thuế thu nhập cá nhân của bạn là 25%:  " + income * 0.25);
+    } else if (income <= 32 && income > 18) {
+        alert("thuế thu nhập cá nhân của bạn là 20%:  " + income * 0.20);
+    } else if (income <= 18 && income > 10) {
+        alert("thuế thu nhập cá nhân của bạn là 15%:  " + income * 0.15);
+    } else if (income <= 10 && income > 5) {
+        alert("thuế thu nhập cá nhân của bạn là 10%:  " + income * 0.10);
+    } else {
+        alert("thuế thu nhập cá nhân của bạn là 5%:  " + income * 0.05);
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1.</title>
+</head>
+<body>
+<script>
+    let test = parseInt(prompt("Nhập điểm bài kiểm tra:"));
+    let midTerm = parseInt(prompt("Nhập điểm thi giữa kỳ:"));
+    let endTerm = parseInt(prompt("Nhập điểm thi cuối kỳ:"));
+    let dtb = (test + midTerm + endTerm) / 3;
+    dtb = parseInt("dtb");
+    if (dtb >= 8) {
+        alert("Học lực giỏi");
+    } else if (dtb < 8 && dtb >= 6.5 ){
+        alert("Học lực khá");
+    } else if (dtb < 6.5 && dtb >=5){
+        alert("Học lực trung bình");
+    }else {
+        alert("Học lực yếu");
+    }
+</script>
+</body>
+</html>

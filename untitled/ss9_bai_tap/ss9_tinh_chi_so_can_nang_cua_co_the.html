@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th width="100"><input type="text" id="weight" >weight</th>
+        <th width="100"><input type="text" id="height" >height</th>
+        <th width="100"><button onclick="BMI()">BMI</button></th>
+    </tr>
+</table>
+</body>
+<script>
+    function BMI() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        weight = parseInt(weight);
+        height = parseInt(height);
+        let csBMI = weight/(height*height);
+        csBMI = parseInt(csBMI);
+        if (csBMI < 18)
+            document.write("Underweight");
+        else if (csBMI < 25.0)
+            document.write("Normal");
+        else if (csBMI < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+
+    }
+</script>
+</html>

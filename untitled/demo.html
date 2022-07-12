@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>"hello"</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20 so trong day fibonacci</title>
 </head>
 <body>
-<hr>
-<h1>"Demo Bai 1"</h1>
-"test lan 1, <br>test lan 2</br> "s
-</p>
-
-    </hr>
-<a href="https://vi.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">
-    <img src="https://vi.wikipedia.org/wiki/Cristiano_Ronaldo#/media/T%E1%BA%ADp_tin:Cristiano_Ronaldo_2018.jpg">
-</a>
-
+<script>
+    let number1 = 0,
+        number2 = 0,
+        number3 = 0;
+    let fibonacci = "";
+    for (let i = 1; i < 21; i++) {
+        if (i == 1) {
+            number2 = 1;
+            number3 = 1;
+            fibonacci += number3 + "";
+           alert(i + "=" + fibonacci);
+        } else {
+            number3 = number1 + number2;
+            number1 = number2;
+            number2 = number3;
+            fibonacci += number3 + "";
+            alert(i + "=" + number3);
+        }
+    }
+    alert(i + "=" + fibonacci);
+</script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let temperature = parseFloat(prompt("Nhập vào nhiệt độ: "));
+    while (temperature >100 || temperature <20){
+
+        if (temperature>100){
+            alert("yêu cầu giảm nhiệt độ")
+            temperature = parseFloat(prompt("Nhập vào nhiệt độ: "));
+
+        } else if (temperature<20){
+            alert("yêu cầu tăng nhiệt độ");
+            temperature = parseFloat(prompt("Nhập vào nhiệt độ: "));
+
+        }
+
+    }alert("bthuong");
+</script>
+</body>
+</html>

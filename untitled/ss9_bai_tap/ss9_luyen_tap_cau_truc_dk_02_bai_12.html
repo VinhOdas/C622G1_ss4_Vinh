@@ -5,20 +5,20 @@
     <title>bai1.</title>
 </head>
 <body>
-
 </body>
 <script>
-    let bankDeposits = parseInt(prompt("Nhập số tiền gửi"));
-    let month = parseInt(prompt("nhập số tháng:"));
-    let interest = parseFloat(prompt("nhập lãi suất"));
-    let amount1;
-    for (let i = 1; i <= month ; i++) {
-        bankDeposits  =+ bankDeposits  * interest;
-
-    }alert(bankDeposits);
-
-
-
-
+    let tienGui = parseInt(prompt("Nhập số tiền gửi"));
+    let thang = parseInt(prompt("nhập số tháng:"));
+    let laiSuat = parseFloat(prompt("nhập lãi suất"));
+    let tienLai = tienGui;
+    for (let i = 1; i <= thang ; i++) {
+        // tienLai = tienGui * laiSuat;
+        // tienLai = tienGui + tienLai * laiSuat;
+       tienGui =  tienGui + tienGui * laiSuat;
+       // document.write(tienLai);
+       // document.write("<br>");
+    }
+    tienGui -= tienLai;
+   document.write(tienGui);
 </script>
 </html>

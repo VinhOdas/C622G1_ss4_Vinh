@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>bai1.</title>
 </head>
 <body>
-<script>
-    for (let i = 1; i <=5 ; i++) {
-        for ( let j = 5;j>=i;j--){
-            document.write("*");
-        }document.write("<br>");
-    }
-</script>
 </body>
+<script>
+    let tienGui = parseInt(prompt("Nhập số tiền gửi"));
+    let thang = parseInt(prompt("nhập số tháng:"));
+    let laiSuat = parseFloat(prompt("nhập lãi suất"));
+    let tienLai = tienGui;
+    for (let i = 1; i <= thang ; i++) {
+        // tienLai = tienGui * laiSuat;
+        // tienLai = tienGui + tienLai * laiSuat;
+        tienGui =  tienGui + tienGui * laiSuat;
+        // document.write(tienLai);
+        // document.write("<br>");
+    }
+    tienGui -= tienLai;
+    document.write(tienGui);
+</script>
 </html>

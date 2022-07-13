@@ -1,39 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hiển thị các số nguyên tố đầu tiên</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
-    let i;
-    let n1 = 0;
-    let n2 = 0;
-    let n3 = 0;
-    let nextn = "";
-    let nextn1= "";
-    for (i = 0; i <=20; i++) {
-        if(i==0){
-            n1 =0;
-            n2 =1;
-            n3 =1;
-            nextn = n3 + "";
-            console.log(nextn);
-        }else {
-            n3 = n1 + n2;
-            n1=n2;
-            n2=n3;
-            nextn = n3 +"";
-            console.log(n3);
-            if (n3%5 == 0){
-                nextn1 = n3;
-                break;
-            }
+    for (let i = 0; i <=100 ; i++) {
+        if (i%3===0 && i%5===0){
+            document.write(i + "fizzbuzz" + "<br>")
         }
-
+        else  if (i%3===0){
+            document.write(i + "fizz" + "<br>");
+        }else if (i%5===0){
+            document.write(i + "buzz" + "<br>");
+        }
     }
-    alert(nextn1);
 </script>
-</body>
 
+</body>
 </html>

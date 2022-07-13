@@ -1,39 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hiển thị các số nguyên tố đầu tiên</title>
+    <title>Title</title>
 </head>
 <body>
+<button onclick="game()">Bắt đầu</button>
 <script>
-    let i;
-    let n1 = 0;
-    let n2 = 0;
-    let n3 = 0;
-    let nextn = "";
-    let nextn1= "";
-    for (i = 0; i <=20; i++) {
-        if(i==0){
-            n1 =0;
-            n2 =1;
-            n3 =1;
-            nextn = n3 + "";
-            console.log(nextn);
-        }else {
-            n3 = n1 + n2;
-            n1=n2;
-            n2=n3;
-            nextn = n3 +"";
-            console.log(n3);
-            if (n3%5 == 0){
-                nextn1 = n3;
-                break;
+    function game() {
+        let soNhapVao1 = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bào nhiêu ? ");
+        let soNhapVao2;
+        let soNgauNhien = Math.floor(Math.random() * soNhapVao1);
+        console.log(soNgauNhien);
+        for (let i = 0; i < 4; i++) {
+            soNhapVao2 = +prompt("Nhập số bạn đoán")
+            if (soNgauNhien === soNhapVao2) {
+                alert('Bạn đã đoán đúng');
+            } else if (soNhapVao2 > soNgauNhien) {
+                alert("Số bạn đoán lớn hơn");
+            } else if (soNhapVao2 < soNgauNhien) {
+                alert("Số bạn đoán nhỏ hơn");
             }
         }
-
+        alert('Bạn hết số lần đoán');
+        document.write('Bạn hết số lần đoán');
     }
-    alert(nextn1);
 </script>
 </body>
-
 </html>

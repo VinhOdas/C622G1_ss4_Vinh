@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let result = [];
+    let max ;
+    let index =0;
+    let tb ;
+    for (let i = 0; i <10 ; i++) {
+        let number = parseInt(prompt("Nhập vào số phần tử của mảng:  "));
+        result.push(number);
+
+
+        if (max < result[i] || i == 0 ){
+            max = result[i];
+
+            index += result[i];
+            tb = index/result.length;
+        }
+    }
+    document.write(result);
+    document.write("<br/>");
+    document.write("giá trị trung bình là :"+tb);
+    document.write("<br/>");
+    document.write(max);
+
+
+</script>
+</body>
+</html>

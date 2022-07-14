@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="phienDich">
+<input type="button" value="nhập" onclick="dichTu()">
+<p id="result"></p>
+</body>
+<script>
+    function dichTu() {
+        let arr_Eng = ["Orange","Mango","Banana","Summer","Legend","Football","Thằng Sơn"];
+        let arr_Vie = ["Cam","Xoài","Chuối","Mùa hè","Huyền Thoại","Bóng đá","thằng khùng"];
+        let nhapVao = document.getElementById("phienDich").value;
+        if (arr_Eng.indexOf(nhapVao)!== -1){
+            document.getElementById("result").innerHTML =(arr_Vie[arr_Eng.indexOf(nhapVao)]);
+        }else {
+            document.getElementById("result").innerHTML =("Không có");
+        }
+    }
+</script>
+</html>

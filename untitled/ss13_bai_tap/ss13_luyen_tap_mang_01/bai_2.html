@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let result = [];
+    let max ;
+    let index =0;
+    for (let i = 0; i <10 ; i++) {
+        let number = prompt("Nhập vào số phần tử của mảng:  ");
+        result.push(number);
+        if (max < result[i] || i == 0 ){
+            max = result[i];
+
+            index = i;
+
+        }
+    }
+    document.write(result);
+    document.write("phần tử có giá trị lớn nhất  " + max +"tại vị trí:" + index);
+
+</script>
+</body>
+</html>

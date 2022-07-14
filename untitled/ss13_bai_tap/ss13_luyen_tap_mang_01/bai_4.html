@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let result = [];
+    let new_Result = [];
+
+    let tb ;
+    for (let i = 0; i <10 ; i++) {
+        let number = prompt("Nhập vào số phần tử của mảng:  ");
+        result.push(number);
+    }
+    for (let j = result.length -1 ; j>=0;j--){
+        new_Result.push(result[j]);
+    }
+    document.write(result);
+    document.write("<br/>");
+    document.write(new_Result);
+    document.write("<br/>");
+</script>
+</body>
+</html>

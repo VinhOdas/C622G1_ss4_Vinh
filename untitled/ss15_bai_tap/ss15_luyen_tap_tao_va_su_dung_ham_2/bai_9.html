@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+<script>
+function getArray(arr) {
+    arr =[];
+    let count = 0;
+    let doDai = +prompt("Nhâp vào độ dài :");
+    let kiTu = prompt("Nhập kí tự cần kiểm tra");
+    for (let i = 0; i <doDai ; i++) {
+        arr.push(prompt("Nhập ký tự trong chuỗi"));
+        if (kiTu == arr[i]){
+            count ++;
+        }
+    }
+    if (count > 0){
+        return count;
+    }else {
+        return -1;
+    }
+}
+let newArray = [];
+alert(getArray(newArray));
+
+</script>
+</body>
+</html>

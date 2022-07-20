@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkNumber(number) {
+        number = prompt("Nhập vào số bất kì");
+        if (number > 2) {
+            for (let i = 2; i < number; i++) {
+                if (number % i != 0) {
+                    alert("snt");
+                    return number;
+                } else {
+                    alert("Không phải số nguyên tố");
+                }
+            }
+        } else if (number == 2) {
+            alert("la so nguyen to");
+        } else {
+            alert("khong phai la so nguyen to");
+        }
+    }
+    checkNumber();
+</script>
+</body>
+</html>

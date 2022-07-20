@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+<script>
+    let mang = [];
+function swapMang() {
+
+    for (let i = 0; i < mang.length; i++) {
+        mang = +prompt("Nhập vào");
+        mang.push();
+    }
+    let first = 0;
+    let last = mang.length - 1;
+    while (first < last) {
+        let b = mang[first];
+        mang[first] = mang[last];
+        mang[last] = b;
+        first++;
+        last--;
+    }
+    alert(mang);
+
+}
+swapMang();
+
+</script>
+</body>
+</html>

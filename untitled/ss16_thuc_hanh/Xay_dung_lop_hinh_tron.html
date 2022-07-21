@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this._radius = radius;
+
+        }
+        get radius(){
+            return this._radius;
+        }
+
+
+        area(){
+            return Math.PI * this._radius * this._radius;
+        }
+    }
+    let hinhTron = new Circle(1);
+    alert(hinhTron.area());
+
+</script>
+</body>
+</html>

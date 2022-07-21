@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+ class  Temperature{
+     constructor(doC,doF) {
+         this.doC = doC;
+         this.doF = doF;
+
+     }
+     getDoC(){
+         this.doC = doF
+     }
+     doCC(){
+         return 5*(this.doF -32)/9;
+     }
+     doFF(){
+         return this.doC*9/5 + 32;
+     }
+     doKenvin(){
+         return this.doC + 273.15;
+     }
+ }
+ let nhietDo = new Temperature(5,100);
+ alert(   " Độ C sang độ F là: " + nhietDo.doFF());
+ alert( " Độ F sang độ C là: " + nhietDo.doCC());
+ alert( " Độ F sang độ C là: " + nhietDo.doKenvin());
+</script>
+</body>
+</html>

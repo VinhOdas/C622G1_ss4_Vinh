@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+    <title>Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra
+        xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó,
+        nếu không trả về -1.
+    </title>
 </head>
 <body>
 <script>
-function getArray(arr) {
-    arr =[];
+function getArray(arr,kiTu) {
     let count = 0;
-    let doDai = +prompt("Nhâp vào độ dài :");
-    let kiTu = prompt("Nhập kí tự cần kiểm tra");
-    for (let i = 0; i <doDai ; i++) {
-        arr.push(prompt("Nhập ký tự trong chuỗi"));
+    for (let i = 0; i <arr.length ; i++) {
         if (kiTu == arr[i]){
             count ++;
         }
@@ -23,8 +22,9 @@ function getArray(arr) {
         return -1;
     }
 }
-let newArray = [];
-alert(getArray(newArray));
+let newArray = ['a','b','c'];
+
+alert(getArray(newArray,'g'));
 
 </script>
 </body>

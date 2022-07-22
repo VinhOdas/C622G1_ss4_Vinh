@@ -6,26 +6,20 @@
 </head>
 <body>
 <script>
-    let mang = [];
-function swapMang() {
-
-    for (let i = 0; i < mang.length; i++) {
-        mang = +prompt("Nhập vào");
-        mang.push();
+    let array = new Array(4);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt("Nhập vào");
     }
-    let first = 0;
-    let last = mang.length - 1;
-    while (first < last) {
-        let b = mang[first];
-        mang[first] = mang[last];
-        mang[last] = b;
-        first++;
-        last--;
+    function swapMang(arr) {
+        for (let i = 0; i < arr.length/2; i++) {
+            let temp = 0;
+            temp = arr[i];
+            arr[i] = arr[arr.length-1-i];
+            arr[arr.length-1 -i] = temp;
+        }
     }
-    alert(mang);
-
-}
-swapMang();
+    (swapMang(array));
+    alert(array);
 
 </script>
 </body>

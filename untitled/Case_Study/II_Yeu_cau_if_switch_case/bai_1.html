@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để nhập lương nhân viên,
+        tính thuế thu nhập và lương ròng (số tiền lương thực
+        sự mà nhân viên đó nhận được). Với các thông số giả sử
+        như sau (không theo luật lương, chỉ là con số giả sử để
+        dễ tính toán):</title>
+</head>
+<body>
+<script>
+    let luongNhanVien = +prompt("Nhập vào lương nhân viên");
+
+    if (luongNhanVien == 15) {
+        let thue = 20 / 100
+        let luongRong = luongNhanVien - (luongNhanVien * thue);
+
+            alert("Lương ròng của nhân viên là:" + luongRong);
+    }
+    if (luongNhanVien >= 7 && luongNhanVien < 15) {
+        thue = 10 / 100;
+        let luongRong = luongNhanVien - (luongNhanVien * thue);
+        alert("Lương ròng của nhân viên là: " + luongRong);
+    }
+    if (luongNhanVien < 7) {
+        thue = 5 / 100;
+        luongRong = luongNhanVien - (luongNhanVien * thue);
+        alert("Lương ròng của nhân viên là: " + luongRong);
+    }
+
+</script>
+</body>
+</html>

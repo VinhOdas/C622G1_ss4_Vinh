@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1,2,3];
+    let prefixSums = [];
+    let sum = 0;
+    for (let i = 1; i <=a.length ; i++) {
+        sum = sum + i;
+        prefixSums.push(sum);
+    }
+    alert(prefixSums);
+    alert("Độ dài của mảng là:"+ sum);
+</script>
+</body>
+</html>

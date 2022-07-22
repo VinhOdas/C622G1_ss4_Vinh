@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+
+</body>
+
+<script>
+
+    let menu = ['Cà Phê', 'Cam Vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+    let donGia = [10000,20000,123456,123454,223123,3212322,452132];
+    display(menu,donGia);
+
+    function display() {
+
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Món</th>\n' +
+            '        <th>Số lượng</th>\n' +
+            '        <th>Giá</th>\n' +
+            '        <th>Thành tiền </th>\n' +
+            '    </tr>';
+        for (let i = 0; i < menu.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>'+ (i +1) +'</td>\n' +
+                '        <td>'+ menu[i] +'</td>\n' +
+                '        <td><input type="number" ></td>\n' +
+                '        <td>'+ donGia[i] +'</td>\n' +
+                '        <td></td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+</script>
+</html>

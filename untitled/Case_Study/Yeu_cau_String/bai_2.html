@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = 'VinhOdasVinhOdas';
+    let kyTu = str.split("");
+    let str2 = [kyTu[0]];
+    let dem = 1;
+    for (let i = 1; i < kyTu.length; i++) {
+        if (!(str2.includes(kyTu[i]))) {
+            dem++;
+            str2.push(kyTu[i]);
+        }
+    }
+    document.write("số ký tự khác nhau trong chuỗi là : " + dem + "<br>");
+    document.write("các ký tự trong chuỗi: " + str + "<br>");
+    document.write("Các ký tự khác nhau trong chuỗi:" + str2 + "<br>");
+</script>
+</body>
+</html>

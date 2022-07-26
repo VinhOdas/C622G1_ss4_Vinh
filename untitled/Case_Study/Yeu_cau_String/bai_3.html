@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let mangS1 = s1.split("");
+    let s2 = "adcaa";
+    let mangS2 = s2.split("");
+    let commonCharacterCount = [];
+    let dem = 0;
+    for (let i = 0; i < mangS1.length; i++) {
+        for (let j = 0; j < mangS2.length; j++) {
+            if (mangS1[i] === mangS2[j]) {
+                if (!(commonCharacterCount.includes(mangS1[i])))
+                    commonCharacterCount.push(mangS1[i]);
+
+            }
+        }
+        dem++;
+    }
+    alert(commonCharacterCount);
+    alert(dem);
+</script>
+</body>
+</html>

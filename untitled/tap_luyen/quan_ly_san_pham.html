@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapVao">
+<input type="button" onclick="addSanPham()" value="Click">
+<p id="display"></p>
+
+</body>
+<script>
+    let hienThiSanPham = ['amen', 'omo'];
+    display(hienThiSanPham);
+    function display(list) {
+        let bangTable = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Tên</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            bangTable += '<tr>\n' +
+                '        <td>'+ (i + 1) +'</td>\n' +
+                '        <td>'+ list[i] +'</td>\n' +
+                '        <td><input type="button" onclick="edit('+ i +')" value="Edit"></td>\n' +
+                '        <td><input type="button" onclick="Delete('+ i +')" value="Delete"></td>\n' +
+                '\n' +
+                '    </tr>';
+        }
+        bangTable += '</table>';
+        document.getElementById('display').innerHTML = bangTable;
+    }
+    function addSanPham() {
+        let them = document.getElementById("nhapVao").value;
+        hienThiSanPham.push(them);
+        display(hienThiSanPham);
+
+    }
+    function edit(index) {
+        let clickEdit = prompt("Tên Bạn muốn sửa là:");
+        hienThiSanPham[index] = clickEdit;
+        display(hienThiSanPham);
+
+    }
+    function Delete(index) {
+        let clickDelete = hienThiSanPham[index];
+        if (clickDelete){
+            hienThiSanPham.splice(index,1);
+        }
+        display(hienThiSanPham);
+
+
+    }
+
+
+
+
+</script>
+</html>

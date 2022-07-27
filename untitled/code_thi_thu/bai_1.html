@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập vào n phần tử  ");
+    let array = [];
+    let sumChan = 0;
+    let sumLe = 0;
+    while (number > 50 || number < 0) {
+        alert("Nhập lại");
+        number = +prompt("Nhập lại");
+    }
+    for (let i = 0; i < number; i++) {
+        array.push(+prompt("Nhập vào 1 số nguyên bất kì"));
+        if (i % 2 == 0) {
+            sumChan += array[i];
+        } else if (i % 2 != 0) {
+            sumLe += array[i];
+        }
+
+    }
+    let tongSum = sumChan - sumLe;
+    document.write(array + "<br>");
+    document.write(sumChan + "<br>");
+    document.write(sumLe + "<br>");
+    document.write(tongSum + "<br>");
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" placeholder="Mãy máy tính" id="maMay">
+<input type="text" placeholder="Tên Máy tính" id="tenMay">
+<input type="text" placeholder="Nhà sản xuất" id="nhaSX">
+<input type="text" placeholder="Giá Bán" id="giaBan">
+<input type="button" onclick="Add()" value="Add">
+<p id="display"></p>
+</body>
+<script>
+
+
+    class Computer {
+        constructor(maMay, tenMay, nhaSX, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.nhaSX = nhaSX;
+            this.giaBan = giaBan;
+        }
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getNhaSanXuat() {
+            return this.nhaSX;
+        }
+
+        getGiaBan() {
+            return this.giaBan;
+        }
+
+        setMaMay(maMay) {
+            this.maMay = maMay;
+        }
+
+        setTenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        setNhaSanXuat(nhaSX) {
+            this.nhaSX = nhaSX;
+        }
+
+        setGiaBan(giaBan) {
+            this.giaBan = giaBan;
+        }
+    }
+
+    let hienThiMay1 = new Computer('03', 'Asus1', 'Asus1', '100001');
+    let hienThiMay2 = new Computer('04', 'Asus', 'Asus', '10000');
+    let hienThiMay3 = new Computer('04', 'Asus', 'Asus', '10000');
+    let hienThiMay = [hienThiMay1, hienThiMay2, hienThiMay3];
+    display(hienThiMay);
+
+    function display(list) {
+        let tableComputer = '<table border="1" >\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã Máy</th>\n' +
+            '        <th>Tên Máy</th>\n' +
+            '        <th>Nhà Sản Xuất</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableComputer += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getMaMay() + '</td>\n' +
+                '        <td>' + list[i].getTenMay() + '</td>\n' +
+                '        <td>' + list[i].getNhaSanXuat() + '</td>\n' +
+                '        <td>' + list[i].getGiaBan() + '</td>\n' +
+                '        <td>' + '<input type="button" value="Edit" onclick="Edit(' + i + ')">' + '</td>\n' +
+                '        <td>' + '<input type="button"  value="Xóa" onclick="Xoa(' + i + ')">' + '</td>\n' +
+                '    </tr>';
+        }
+        tableComputer += '</table>';
+        document.getElementById("display").innerHTML = tableComputer;
+    }
+
+    function Add() {
+        let maMayTinh = document.getElementById("maMay").value;
+        let tenMayTinh = document.getElementById("tenMay").value;
+        let tenNhaSanXuat = document.getElementById("nhaSX").value;
+        let giaBan1 = document.getElementById("giaBan").value;
+        let themMayTinh = new Computer(maMayTinh, tenMayTinh, tenNhaSanXuat, giaBan1);
+        hienThiMay.push(themMayTinh)
+        display(hienThiMay);
+    }
+
+    function Edit(index) {
+        let maMayTinhEdit = prompt("Nhập mã máy muốn sửa");
+        let tenMayTinhEdit = prompt("Nhập tên máy muốn sửa");
+        let tenNSXEdit = prompt("Nhập tên nhà sản xuất muốn sửa");
+        let suaGiaEdit = prompt("Nhập giá muốn sửa");
+        hienThiMay[index].setMaMay(maMayTinhEdit);
+        hienThiMay[index].setTenMay(tenMayTinhEdit);
+        hienThiMay[index].setNhaSanXuat(tenNSXEdit);
+        hienThiMay[index].setGiaBan(suaGiaEdit);
+        display(hienThiMay);
+    }
+
+    function Xoa(index) {
+       hienThiMay.splice(index,1);
+       display(hienThiMay);
+    }
+
+</script>
+</html>

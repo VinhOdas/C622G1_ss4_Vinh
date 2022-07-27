@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="bienSo" placeholder="Nhập biển số">
+<input id="chuSoHuu" placeholder="Nhập chủ sở hữu">
+<input id="hangXe" placeholder="Nhập hãng xe">
+<button onclick="them()">Add</button>
+<p id="display"></p>
+<script>
+    class XeMay {
+        constructor(bienSo, chuSoHuu, hangXe) {
+            this.bienSo = bienSo;
+            this.chuSoHuu = chuSoHuu;
+            this.hangXe = hangXe;
+        }
+
+        getBienSo() {
+            return this.bienSo;
+        }
+
+        getChuSoHuu() {
+            return this.chuSoHuu;
+        }
+
+        getHangXe() {
+            return this.hangXe;
+        }
+
+        setBienSo(bienSo) {
+            this.bienSo = bienSo;
+        }
+
+        setChuSoHuu(chuSoHuu) {
+            this.chuSoHuu = chuSoHuu;
+        }
+
+        setHangXe(hangXe) {
+            this.hangXe = hangXe;
+        }
+    }
+
+    let xe = new XeMay("74-C19999", "Hoàng Đức Danh", "HonDa");
+    let xe1 = new XeMay("74-C19998", "Phạm Thế Sơn", "HonDa");
+    let xe2 = new XeMay("74-C19997", "Phạm Quang Vinh", "HonDa");
+    let danhSachXe = [xe, xe1, xe2];
+    display(danhSachXe);
+
+    function display(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Biển số</th>\n' +
+            '        <th>Chủ sở hữu</th>\n' +
+            '        <th>Hãng xe</th>\n' +
+            '        <th width="50"></th>\n' +
+            '        <th width="60"></th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getBienSo() + '</td>\n' +
+                '        <td>' + danhSach[i].getChuSoHuu() + '</td>\n' +
+                '        <td>' + danhSach[i].getHangXe() + '</td>\n' +
+                '        <td>' + '<button onclick="edit(' + i + ')">Edit</button>' + '</td>\n' +
+                '        <td>' + '<button onclick="xoa(' + i + ')">Delete</button>' + '</td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    function them() {
+        let bienSo1 = document.getElementById("bienSo").value;
+        let chuSoHuu1 = document.getElementById("chuSoHuu").value;
+        let hangXe1 = document.getElementById("hangXe").value;
+        let xe3 = new XeMay(bienSo1, chuSoHuu1, hangXe1);
+        danhSachXe.push(xe3);
+        display(danhSachXe);
+    }
+
+    function xoa(index) {
+        danhSachXe.splice(index, 1);
+        display(danhSachXe);
+    }
+
+    function edit(index) {
+        let bienSo2 = prompt("Nhập biển số mới");
+        let chuSoHuu2 = prompt("Nhập chủ sở hữu mới");
+        let hangXe2 = prompt("Nhập hãng xe mới");
+        danhSachXe[index].setBienSo(bienSo2);
+        danhSachXe[index].setChuSoHuu(chuSoHuu2);
+        danhSachXe[index].setHangXe(hangXe2);
+        display(danhSachXe);
+    }
+</script>
+</body>
+</html>
